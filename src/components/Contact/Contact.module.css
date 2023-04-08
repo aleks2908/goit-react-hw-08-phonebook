@@ -1,0 +1,17 @@
+.contactListItem {
+  line-height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.deleteButton {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: color, background-color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.deleteButton:hover {
+  background-color: rgb(153, 153, 155);
+  color: #ffffff;
+}
