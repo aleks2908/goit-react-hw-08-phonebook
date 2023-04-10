@@ -5,6 +5,7 @@ import {
   fetchContacts,
   editContact,
 } from './operations';
+import { Notify } from 'notiflix';
 
 const handlePending = state => {
   state.isLoading = true;
@@ -13,6 +14,7 @@ const handlePending = state => {
 const handleRejected = (state, action) => {
   state.isLoading = false;
   state.error = action.payload;
+  Notify.failure('The request failed. Please try again later.');
 };
 
 const contactsSlice = createSlice({
