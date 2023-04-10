@@ -49,7 +49,7 @@ export const ContactForm = () => {
         onSubmit={handleSubmit}
         validationSchema={userSchema}
       >
-        <Form className={css.form} autoComplete="on">
+        <Form className={css.form} autoComplete="off">
           <div className={css.formInputGroup}>
             <Field className={css.formInput} name="name" placeholder="name" />
             <ErrorMessage className={css.error} component="div" name="name" />
