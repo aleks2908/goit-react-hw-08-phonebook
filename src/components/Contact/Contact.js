@@ -1,12 +1,10 @@
 import React from 'react';
 import css from './Contact.module.css';
 import PropTypes from 'prop-types';
-// import { editContact } from 'redux/operations';
-// import { useDispatch } from 'react-redux';
 
 export const Contact = ({ contact, showModal, showEditModal }) => {
   const phoneNumber = `tel:${contact.number}`;
-  // const dispatch = useDispatch();
+
   return (
     <>
       <td>{contact.name}</td>

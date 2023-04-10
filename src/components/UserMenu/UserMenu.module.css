@@ -5,7 +5,7 @@
 }
 
 .username {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .button {
@@ -13,6 +13,7 @@
   padding: 2px 15px;
   border-radius: 8px;
   font-size: 18px;
+  font-weight: bold;
   cursor: pointer;
   background-color: #ffffff;
   transition: color, background-color 350ms cubic-bezier(0.4, 0, 0.2, 1);

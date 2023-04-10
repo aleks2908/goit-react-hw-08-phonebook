@@ -11,10 +11,6 @@
   border: 1px solid;
   gap: 20px;
   border-radius: 8px;
-  /* -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px; */
   margin-top: 100px;
 }
 
@@ -22,28 +18,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* color: red; */
 }
 
 .form {
-  /* max-width: 700px; */
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   width: 100%;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  /* padding: 20px; */
-  /* background-color: gray; */
-  /* border: 1px solid red; */
   gap: 25px;
-  /* border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  margin-top: 150px; */
 }
 
 .formInputGroup {
@@ -54,11 +38,8 @@
 .formInput {
   box-sizing: border-box;
   width: 100%;
-  /* height: 30px; */
   padding: 5px;
-  /* margin-bottom: 20px; */
   font-size: 18px;
-  /* background-color: transparent; */
   border: 1px solid;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -70,14 +51,7 @@
 
 ::placeholder {
   opacity: 0.8;
-  /* color: green; */
 }
-
-/* .label {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 16px;
-} */
 
 .button {
   margin: 0 8px;
@@ -95,7 +69,6 @@
 }
 
 .error {
-  /* text-align: left; */
   padding-top: 4px;
   color: #ff0000;
   font-size: 16px;

@@ -1,10 +1,11 @@
-import css from './ContactForm.module.css';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { object, string, number } from 'yup';
 import { useSelector, useDispatch } from 'react-redux';
 import { addContact } from '../../redux/operations';
 import { selectContacts, selectError, selectIsLoading } from 'redux/selectors';
 import { ThreeDots } from 'react-loader-spinner';
+import { Notify } from 'notiflix';
+import css from './ContactForm.module.css';
 
 export const ContactForm = () => {
   const contacts = useSelector(selectContacts);
@@ -19,7 +20,7 @@ export const ContactForm = () => {
     );
 
     if (filtredContacts) {
-      alert(`${values.name} is already in contacts.`);
+      Notify.warning(`${values.name} is already in contacts.`);
       return;
     }
 

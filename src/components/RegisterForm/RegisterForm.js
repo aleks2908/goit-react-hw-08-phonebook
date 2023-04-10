@@ -1,22 +1,13 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { object, string } from 'yup';
 import css from './RegisterForm.module.css';
-import { selectAuthError } from 'redux/auth/selectors';
-// import { useAuth } from 'hooks';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
 
-  const authError = useSelector(selectAuthError);
-  // console.log('authError: ', authError);
-
   const handleSubmit = (values, { resetForm }) => {
-    // console.log('values: ', values);
-    // e.preventDefault();
-    // const form = e.currentTarget;
-
     dispatch(
       register({
         name: values.name,
@@ -83,7 +74,6 @@ export const RegisterForm = () => {
           </button>
         </Form>
       </Formik>
-      {authError && <b>User creation error. Please enter valid data.</b>}
     </div>
   );
 };

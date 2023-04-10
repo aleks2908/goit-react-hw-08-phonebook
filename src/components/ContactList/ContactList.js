@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Contact } from '../Contact/Contact';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteContact, editContact } from '../../redux/operations';
-import css from './ContactList.module.css';
 import { selectFilteredContactList } from 'redux/selectors';
 import { Modal } from 'components/Modal/Modal';
+import css from './ContactList.module.css';
 
 let contactNameToDelete = '';
 let contactToEdite = {};
@@ -99,13 +99,10 @@ export const ContactList = () => {
         </Modal>
       )}
 
-      {/* =============================================================== */}
-
       {shownEditModal && (
         <Modal modalShoudClose={modalShoudClose}>
           <>
             <b>Editing contact</b>
-            {/* <p>Editing contact {contactToEdite.contactName}</p> */}
 
             <form className={css.form} onSubmit={handleEdit} autoComplete="off">
               <label className={css.label}>
@@ -126,11 +123,7 @@ export const ContactList = () => {
                   defaultValue={contactToEdite.contactNumber}
                 />
               </label>
-              <button
-                type="submit"
-                className={css.button}
-                // onClick={() => shouldEditeContact(true)}
-              >
+              <button type="submit" className={css.button}>
                 save
               </button>
               <button

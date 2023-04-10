@@ -13,11 +13,6 @@ tr:nth-child(even) {
   background-color: #f1eeee;
 }
 
-/* tr:hover {
-  background-color: tomato;
-  color: white;
-} */
-
 .button {
   margin: 14px 8px 0;
   padding: 2px 15px;
@@ -36,13 +31,9 @@ tr:nth-child(even) {
 .label {
   display: flex;
   flex-direction: column;
-  /* justify-content: start; */
-  /* align-items: start; */
   font-size: 18px;
-  /* line-height: 1.4; */
   text-align: left;
   margin-bottom: 16px;
-  /* width: 100px; */
 }
 
 .inputText {

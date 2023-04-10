@@ -1,14 +1,11 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { object, string } from 'yup';
 import css from './LoginForm.module.css';
-import { selectAuthError } from 'redux/auth/selectors';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
-
-  const authError = useSelector(selectAuthError);
 
   const handleSubmit = (values, { resetForm }) => {
     dispatch(
@@ -65,7 +62,6 @@ export const LoginForm = () => {
           </button>
         </Form>
       </Formik>
-      {authError && <b>Login error. Please enter valid data.</b>}
     </div>
   );
 };

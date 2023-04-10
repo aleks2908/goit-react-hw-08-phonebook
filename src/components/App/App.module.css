@@ -1,18 +1,6 @@
-.wrapper {
-  /* margin-left: 10%; */
-  /* max-width: 960px; */
-  /* display: flex; */
-  /* flex-direction: column;/ */
-  /* justify-content: center; */
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 25px;
-  color: #010101;
-}
-
-.spiner {
-  position: absolute;
-  top: 0;
-  margin-left: 70px;
+.isRefreshing {
+  margin-top: 16px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
 }
