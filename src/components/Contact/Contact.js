@@ -36,4 +36,5 @@ Contact.propTypes = {
     number: PropTypes.string.isRequired,
   }).isRequired,
   showModal: PropTypes.func.isRequired,
+  showEditModal: PropTypes.func.isRequired,
 };

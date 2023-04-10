@@ -64,7 +64,6 @@ export const ContactForm = () => {
           </div>
 
           <button className={css.button} type="submit">
-            {/* Add contact */}
             {isLoading && !error ? (
               <ThreeDots
                 height="22"
@@ -80,9 +79,6 @@ export const ContactForm = () => {
               <p>Add contact</p>
             )}
           </button>
-          {/* <button className={css.button} type="submit">
-            Add contact
-          </button> */}
         </Form>
       </Formik>
     </div>
