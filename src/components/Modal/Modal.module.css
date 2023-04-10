@@ -19,8 +19,13 @@
   padding: 15px;
   width: 400px;
   /* height: 100px; */
-  background-color: #fff;
+  /* background-color: #fff; */
   text-align: center;
-  border: 2px solid #98989a;
+  /* border: 2px solid #98989a; */
   border-radius: 20px;
+  font-size: 22px;
+  line-height: 1.4;
+  /* color: gray; */
+  background-color: #d3d1d1;
+  border: 1px solid;
 }

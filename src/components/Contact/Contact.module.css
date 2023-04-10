@@ -5,6 +5,7 @@
 }
 
 .deleteButton {
+  text-align: center;
   font-size: 20px;
   cursor: pointer;
   background-color: transparent;

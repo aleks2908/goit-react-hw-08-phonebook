@@ -1,10 +1,11 @@
 .contactListTable {
   border-collapse: collapse;
-  margin: 30px 0;
+  min-width: 600px;
+  margin: 30px auto;
 }
 
 table td {
-  padding: 6px 20px;
+  padding: 6px 14px;
   border: 1px solid #2a2a2a;
 }
 
@@ -18,7 +19,7 @@ tr:nth-child(even) {
 } */
 
 .button {
-  margin: 0 8px;
+  margin: 14px 8px 0;
   padding: 2px 15px;
   border-radius: 8px;
   font-size: 24px;
@@ -30,4 +31,20 @@ tr:nth-child(even) {
 .button:hover {
   background-color: #98989a;
   color: #ffffff;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: start; */
+  /* align-items: start; */
+  font-size: 18px;
+  /* line-height: 1.4; */
+  text-align: left;
+  margin-bottom: 16px;
+  /* width: 100px; */
+}
+
+.inputText {
+  font-size: 22px;
 }

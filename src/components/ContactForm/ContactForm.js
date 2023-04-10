@@ -3,10 +3,13 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { object, string, number } from 'yup';
 import { useSelector, useDispatch } from 'react-redux';
 import { addContact } from '../../redux/operations';
-import { selectContacts } from '../../redux/selectors';
+import { selectContacts, selectError, selectIsLoading } from 'redux/selectors';
+import { ThreeDots } from 'react-loader-spinner';
 
 export const ContactForm = () => {
   const contacts = useSelector(selectContacts);
+  const isLoading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
   const dispatch = useDispatch();
 
   const handleSubmit = (values, { resetForm }) => {
@@ -22,9 +25,8 @@ export const ContactForm = () => {
 
     dispatch(
       addContact({
-        // values,
         name: values.name,
-        phone: values.number,
+        number: values.number,
       })
     );
 
@@ -39,31 +41,49 @@ export const ContactForm = () => {
   });
 
   return (
-    <>
-      <h2>PhoneBook</h2>
+    <div className={css.formWrapper}>
+      <h2 className={css.formTitle}>PhoneBook</h2>
       <Formik
         initialValues={initialValues}
         onSubmit={handleSubmit}
         validationSchema={userSchema}
       >
-        <Form className={css.form}>
-          <label>
-            Name <br />
-            <Field className={css.label} name="name" />
+        <Form className={css.form} autoComplete="on">
+          <div className={css.formInputGroup}>
+            <Field className={css.formInput} name="name" placeholder="name" />
             <ErrorMessage className={css.error} component="div" name="name" />
-          </label>
-          <label>
-            <br />
-            Number <br />
-            <Field className={css.label} name="number" />
+          </div>
+          <div className={css.formInputGroup}>
+            <Field
+              className={css.formInput}
+              name="number"
+              placeholder="number"
+            />
             <ErrorMessage className={css.error} component="div" name="number" />
-          </label>
-          <br />
+          </div>
+
           <button className={css.button} type="submit">
-            Add contact
+            {/* Add contact */}
+            {isLoading && !error ? (
+              <ThreeDots
+                height="22"
+                width="60"
+                // radius="30"
+                color="gray"
+                ariaLabel="three-dots-loading"
+                // wrapperStyle={{}}
+                // wrapperClassName=""
+                visible={true}
+              />
+            ) : (
+              <p>Add contact</p>
+            )}
           </button>
+          {/* <button className={css.button} type="submit">
+            Add contact
+          </button> */}
         </Form>
       </Formik>
-    </>
+    </div>
   );
 };

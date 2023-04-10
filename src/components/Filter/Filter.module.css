@@ -1,0 +1,26 @@
+.filter {
+  width: 600px;
+  background-color: #d3d1d1;
+  border: 1px solid;
+  gap: 20px;
+  border-radius: 8px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.formInput {
+  box-sizing: border-box;
+  width: 100%;
+  /* height: 30px; */
+  padding: 5px;
+  /* margin-bottom: 20px; */
+  font-size: 18px;
+  /* background-color: transparent; */
+  border: 1px solid;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  outline: none;
+}

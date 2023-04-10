@@ -5,6 +5,7 @@ import {
   selectFilter,
   selectFilteredContactList,
 } from '../../redux/selectors';
+import css from './Filter.module.css';
 
 export const Filter = () => {
   const value = useSelector(selectFilter);
@@ -16,7 +17,7 @@ export const Filter = () => {
   const changeFieldFilter = e => dispatch(changeFilter(e.currentTarget.value));
 
   return (
-    <>
+    <div className={css.filter}>
       <label>
         Find contacts by name
         {filteredContactsLength !== contactsLength && (
@@ -26,6 +27,7 @@ export const Filter = () => {
         )}
         <br />
         <input
+          className={css.formInput}
           value={value}
           type="text"
           name="filter"
@@ -35,6 +37,6 @@ export const Filter = () => {
           onChange={changeFieldFilter}
         />
       </label>
-    </>
+    </div>
   );
 };

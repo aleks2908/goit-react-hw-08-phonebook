@@ -1,14 +1,17 @@
 import React from 'react';
 import css from './Contact.module.css';
 import PropTypes from 'prop-types';
+// import { editContact } from 'redux/operations';
+// import { useDispatch } from 'react-redux';
 
-export const Contact = ({ contact, showModal }) => {
-  const phoneNumber = `tel:${contact.phone}`;
+export const Contact = ({ contact, showModal, showEditModal }) => {
+  const phoneNumber = `tel:${contact.number}`;
+  // const dispatch = useDispatch();
   return (
     <>
       <td>{contact.name}</td>
       <td>
-        <a href={phoneNumber}>{contact.phone}</a>
+        <a href={phoneNumber}>{contact.number}</a>
       </td>
       <td
         onClick={() => showModal(contact.id, contact.name)}
@@ -16,6 +19,13 @@ export const Contact = ({ contact, showModal }) => {
         id={contact.id}
       >
         Delete
+      </td>
+      <td
+        onClick={() => showEditModal(contact.id, contact.name, contact.number)}
+        className={css.deleteButton}
+        id={contact.id}
+      >
+        Edit
       </td>
     </>
   );
@@ -25,7 +35,7 @@ Contact.propTypes = {
   contact: PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    phone: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
   }).isRequired,
   showModal: PropTypes.func.isRequired,
 };
