@@ -66,7 +66,7 @@ export const ContactForm = () => {
           <button className={css.button} type="submit">
             {isLoading && !error ? (
               <ThreeDots
-                height="22"
+                height="20"
                 width="60"
                 // radius="30"
                 color="gray"
