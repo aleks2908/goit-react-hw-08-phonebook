@@ -75,12 +75,11 @@ export const ContactList = () => {
       {shownModal && (
         <Modal modalShoudClose={modalShoudClose}>
           <>
-            <p>
+            <p className={css.title}>
               Do you really want to delete
               <br />
               {contactNameToDelete}?
             </p>
-
             <button
               type="button"
               className={css.button}
@@ -123,16 +122,18 @@ export const ContactList = () => {
                   defaultValue={contactToEdite.contactNumber}
                 />
               </label>
-              <button type="submit" className={css.button}>
-                save
-              </button>
-              <button
-                type="button"
-                className={css.button}
-                onClick={() => setShownEditModal(false)}
-              >
-                cancel
-              </button>
+              <div>
+                <button type="submit" className={css.button}>
+                  save
+                </button>
+                <button
+                  type="button"
+                  className={css.button}
+                  onClick={() => setShownEditModal(false)}
+                >
+                  cancel
+                </button>
+              </div>
             </form>
           </>
         </Modal>

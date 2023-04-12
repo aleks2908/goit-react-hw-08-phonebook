@@ -27,6 +27,7 @@ export const Filter = () => {
         )}
         <br />
         <input
+          autoComplete="off"
           className={css.formInput}
           value={value}
           type="text"

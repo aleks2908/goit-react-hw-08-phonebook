@@ -69,7 +69,7 @@ export const ContactForm = () => {
                 height="20"
                 width="60"
                 // radius="30"
-                color="gray"
+                color="#af7b7b"
                 ariaLabel="three-dots-loading"
                 // wrapperStyle={{}}
                 // wrapperClassName=""
