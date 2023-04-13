@@ -19,7 +19,6 @@
   border-radius: 20px;
   font-size: 22px;
   line-height: 1.4;
-  /* background-color: #d3d1d1; */
   background-color: var(--secondary-bg-color);
   border: 1px solid;
 }

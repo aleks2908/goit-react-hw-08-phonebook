@@ -54,25 +54,6 @@
   opacity: 0.8;
 }
 
-.button {
-  display: flex;
-  width: 132px;
-  justify-content: center;
-  align-items: center;
-  margin: 0 8px;
-  padding: 2px 15px;
-  border-radius: 8px;
-  font-size: 18px;
-  cursor: pointer;
-  background-color: var(--primery-color);
-  transition: var(--transition_data);
-}
-
-.button:hover {
-  background-color: var(--hover-bg-color);
-  color: var(--primery-color);
-}
-
 .error {
   padding-top: 4px;
   color: var(--error-color);

@@ -5,6 +5,7 @@ import { deleteContact, editContact } from '../../redux/operations';
 import { selectFilteredContactList } from 'redux/selectors';
 import { Modal } from 'components/Modal/Modal';
 import css from './ContactList.module.css';
+import { Button } from 'components/Button/Button';
 
 let contactNameToDelete = '';
 let contactToEdite = {};
@@ -16,10 +17,8 @@ export const ContactList = () => {
 
   const dispatch = useDispatch();
 
-  const shouldDeleteContact = value => {
-    if (value) {
-      dispatch(deleteContact(idToDelete));
-    }
+  const shouldDeleteContact = () => {
+    dispatch(deleteContact(idToDelete));
     modalShoudClose();
   };
 
@@ -80,20 +79,12 @@ export const ContactList = () => {
               <br />
               {contactNameToDelete}?
             </p>
-            <button
-              type="button"
-              className={css.button}
-              onClick={() => shouldDeleteContact(true)}
-            >
+            <Button type="button" onClick={shouldDeleteContact}>
               ok
-            </button>
-            <button
-              type="button"
-              className={css.button}
-              onClick={() => shouldDeleteContact(false)}
-            >
+            </Button>
+            <Button type="button" onClick={modalShoudClose}>
               cancel
-            </button>
+            </Button>
           </>
         </Modal>
       )}
@@ -123,16 +114,10 @@ export const ContactList = () => {
                 />
               </label>
               <div>
-                <button type="submit" className={css.button}>
-                  save
-                </button>
-                <button
-                  type="button"
-                  className={css.button}
-                  onClick={() => setShownEditModal(false)}
-                >
+                <Button type="submit">save</Button>
+                <Button type="button" onClick={modalShoudClose}>
                   cancel
-                </button>
+                </Button>
               </div>
             </form>
           </>

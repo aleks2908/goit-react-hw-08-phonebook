@@ -3,6 +3,7 @@ import { logIn } from 'redux/auth/operations';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { object, string } from 'yup';
 import css from './LoginForm.module.css';
+import { Button } from 'components/Button/Button';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -42,7 +43,6 @@ export const LoginForm = () => {
             />
             <ErrorMessage className={css.error} component="div" name="email" />
           </div>
-
           <div className={css.formInputGroup}>
             <Field
               className={css.formInput}
@@ -56,10 +56,7 @@ export const LoginForm = () => {
               name="password"
             />
           </div>
-
-          <button className={css.button} type="submit">
-            Log in
-          </button>
+          <Button type="submit">Log in</Button>
         </Form>
       </Formik>
     </div>

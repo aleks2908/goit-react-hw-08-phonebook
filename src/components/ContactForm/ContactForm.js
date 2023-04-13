@@ -6,6 +6,7 @@ import { selectContacts, selectError, selectIsLoading } from 'redux/selectors';
 import { ThreeDots } from 'react-loader-spinner';
 import { Notify } from 'notiflix';
 import css from './ContactForm.module.css';
+import { Button } from 'components/Button/Button';
 
 export const ContactForm = () => {
   const contacts = useSelector(selectContacts);
@@ -63,11 +64,11 @@ export const ContactForm = () => {
             <ErrorMessage className={css.error} component="div" name="number" />
           </div>
 
-          <button className={css.button} type="submit">
+          <Button type="submit">
             {isLoading && !error ? (
               <ThreeDots
-                height="20"
-                width="60"
+                height="25"
+                width="116"
                 // radius="30"
                 color="#af7b7b"
                 ariaLabel="three-dots-loading"
@@ -76,9 +77,9 @@ export const ContactForm = () => {
                 visible={true}
               />
             ) : (
-              <p>Add contact</p>
+              <>Add contact</>
             )}
-          </button>
+          </Button>
         </Form>
       </Formik>
     </div>

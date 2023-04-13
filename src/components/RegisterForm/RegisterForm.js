@@ -3,6 +3,7 @@ import { register } from 'redux/auth/operations';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { object, string } from 'yup';
 import css from './RegisterForm.module.css';
+import { Button } from 'components/Button/Button';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -68,10 +69,7 @@ export const RegisterForm = () => {
               name="password"
             />
           </div>
-
-          <button className={css.button} type="submit">
-            Register
-          </button>
+          <Button type="submit">Register</Button>
         </Form>
       </Formik>
     </div>

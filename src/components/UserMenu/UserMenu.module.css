@@ -7,19 +7,3 @@
 .username {
   font-weight: 500;
 }
-
-.button {
-  margin: 0 8px;
-  padding: 2px 15px;
-  border-radius: 8px;
-  font-size: 18px;
-  /* font-weight: bold; */
-  cursor: pointer;
-  background-color: var(--primery-color);
-  transition: var(--transition_data);
-}
-
-.button:hover {
-  background-color: var(--hover-bg-color);
-  color: var(--primery-color);
-}

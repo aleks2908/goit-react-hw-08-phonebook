@@ -39,7 +39,7 @@
   box-sizing: border-box;
   width: 100%;
   padding: 5px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   border: 1px solid;
   border-radius: 5px;
@@ -52,21 +52,6 @@
 
 ::placeholder {
   opacity: 0.8;
-}
-
-.button {
-  margin: 0 8px;
-  padding: 2px 15px;
-  border-radius: 8px;
-  font-size: 18px;
-  cursor: pointer;
-  background-color: var(--primery-color);
-  transition: var(--transition_data);
-}
-
-.button:hover {
-  background-color: var(--hover-bg-color);
-  color: var(--primery-color);
 }
 
 .error {
